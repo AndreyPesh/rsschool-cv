@@ -6,6 +6,7 @@
 
 html {
   font-family: 'Roboto', Verdana, sans-serif;
+  scroll-behavior: smooth;
 }
 
 .container {
@@ -114,4 +115,22 @@ html {
 .contacts__icon_location {
   background: url("../images/icons/location.svg") no-repeat center;
   background-size: 20px;
+}
+
+.skills__list {
+  padding-left: 50px;
+}
+
+
+.skills__technology {
+  padding: 5px 5px 5px 5px;
+  list-style: disc;
+}
+
+.skills__technology:first-child {
+  text-transform: uppercase;
+}
+
+.language__name {
+  padding: 10px 10px 10px 30px;
 }
