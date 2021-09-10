@@ -1,6 +1,7 @@
 :root {
   --dark-color: rgb(31, 29, 29);
   --light-color: rgb(243, 240, 240);
+  --light-gray-color: rgb(238, 238, 238);
 }
 
 html {
@@ -11,6 +12,11 @@ html {
   max-width: 1024px;
   margin: auto;
   padding: 0 20px;
+}
+
+.container_border {
+  border-left: 1px solid var(--light-gray-color);
+  box-shadow: 0px 0px 10px #232931;
 }
 
 .header {
@@ -56,4 +62,56 @@ html {
 .navigation__link > a:hover {
   transform: scale(1.1);
   transition: transform 0.2s ease;
+}
+.subtitle {
+  padding: 10px 0 10px 20px;
+  cursor: default;
+}
+
+.left-content {
+  max-width: 30%;
+}
+
+.profile-data {
+  padding: 10px 0;
+  text-align: center;
+}
+
+.contacts__list {
+  padding: 10px 10px;
+  max-width: 100%;
+}
+.contacts__data {
+  position: relative;
+  padding: 10px 10px 10px 30px;
+  display: flex;
+  justify-content: space-between;
+  flex-basis: 100%;
+}
+
+.contacts__data > a {
+  color: var(--dark-color);
+}
+
+.contacts__icon{
+  display: inline-block;
+  position: absolute;
+  left: 0;
+  width: 20px;
+  height: 20px;
+}
+
+.contacts__icon_phone {
+    background: url("../images/icons/phone.svg") no-repeat center;
+    background-size: 20px;
+}
+
+.contacts__icon_mail {
+  background: url("../images/icons/mail.svg") no-repeat center;
+  background-size: 20px;
+}
+
+.contacts__icon_location {
+  background: url("../images/icons/location.svg") no-repeat center;
+  background-size: 20px;
 }
