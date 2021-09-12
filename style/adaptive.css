@@ -67,6 +67,7 @@
     width: 300px;
     height: 100vh;
     background-color: rgba(0, 0, 0, 0.6);
+    z-index: 100;
   }
 
   .navigation__header.active .navigation__list {
@@ -83,11 +84,51 @@
     width: 100%;
     box-sizing: border-box;
   }
+
+  .layout-2-column {
+    flex-wrap: wrap;
+  }
+
+  .left-content {
+    max-width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  .contacts {
+    padding-right: 5px;
+  }
+
+  .skills {
+    max-width: 63%;
+  }
+
+  .language {
+    flex-grow: 1;
+    align-self: flex-start;
+    max-width: 43%;
+  }
+  
+  .main {
+    max-width: 100%;
+  }
+ 
 }
 
 @media screen and (max-width: 425px) {
   .navigation__header.active {
     width: 80%;
+  }
+
+  .skills {
+    max-width: 100%;
+  }
+
+  .language {
+    max-width: 100%;
+    flex-grow: 0;
   }
 }
 
