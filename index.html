@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400&display=swap">
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.9/styles/agate.min.css">
+  <link rel="stylesheet" href="./style/normalize.css">
+  <link rel="stylesheet" href="./style/style.css">
+  <link rel="stylesheet" href="./style/adaptive.css">
+  <title>CV</title>
+</head>
+<body>
+  <header class="header">
+    <div class="container">
+      <div class="header-content">
+        <div class="header-content__author">
+          <h1 class="header-content__title">Andrey Peshko</h1>
+          <span class="header-content__position">Junior Frontend Developer</span>
+        </div>
+        <nav class="navigation navigation__header">
+          <ul class="navigation__list">
+            <li class="navigation__link">
+              <a href="#contacts">Contacts</a>
+            </li>
+            <li class="navigation__link">
+              <a href="#about-me">About me</a>
+            </li>
+            <li class="navigation__link">
+              <a href="#skills">Skills</a>
+            </li>
+            <li class="navigation__link">
+              <a href="#code">Code Example</a>
+            </li>
+            <li class="navigation__link">
+              <a href="#courses">Courses</a>
+            </li>
+          </ul>
+        </nav>
+        <span class="burger">
+          <span class="burger__line"></span>
+        </span>
+      </div>
+    </div>
+  </header>
+  <div class="container layout-2-column container_border">
+    <aside class="left-content">
+      <figure class="profile-data">
+        <img class="profile-data__photo" src="./images/logo.png" width="200" height="248" alt="Photo profile">
+      </figure>
+      <section class="contacts" id="contacts">
+        <h2 class="subtitle">Contacts</h2>
+        <ul class="contacts__list">
+          <li class="contacts__data">
+            <span class="contacts__icon contacts__icon_phone"></span>
+            <b>Phone:</b>
+            <a href="tel:+375(29)-207-14-26">+375(29)-207-14-26</a>
+          </li>
+          <li class="contacts__data">
+            <span class="contacts__icon contacts__icon_mail"></span>
+            <b>E-mail:</b>
+            <a href="mailto:andrey_peshko@mail.ru">andrey_peshko@mail.ru</a>
+          </li>
+          <li class="contacts__data">
+            <span class="contacts__icon contacts__icon_location"></span>
+            <b>Location: </b>
+            <address>Belarus, Minsk</address>
+          </li>
+        </ul>
+      </section>
+      <section class="skills" id="skills">
+        <h2 class="subtitle">Skills and Proficiency</h2>
+        <ul class="skills__list">
+          <li class="skills__technology">Html5, Css3</li>
+          <li class="skills__technology">JavaScript(ES6)</li>
+          <li class="skills__technology">ReactJS, Redux</li>
+          <li class="skills__technology">Webpack 5</li>
+          <li class="skills__technology">Git, GitHub</li>
+          <li class="skills__technology">VS Code</li>
+          <li class="skills__technology">Adobe Photoshop, Figma</li>
+        </ul>
+      </section>
+      <section class="language">
+        <h2 class="subtitle">Languages</h2>
+        <p class="language__name">English: A2</p>
+      </section>
+    </aside>
+    <main class="main">
+      <section class="about-author" id="about-me">
+        <h2 class="subtitle">About me</h2>
+        <p class="paragraph">I am a engineer by training. I am planning to switch my career from non-IT industry to the IT after 7 years of non-IT experience. I am hard-working, responsible, diligent, and friendly person with a good sense of humor. I try to treat other people so as I want them to treat me. </p>
+        <p class="paragraph">Web Development is my favorite hobby. In my free time I study JavaScript. I am particularly interested in React, Redux and other technologies. Also I devote time to learn­ing English every day.</p>
+      </section>
+      <section class="code-example" id="code">
+        <h2 class="subtitle">Code example</h2>
+        <p class="paragraph paragraph_italic">Given a positive integer n written as abcd... (a, b, c, d... being digits) and a positive integer p
+          we want to find a positive integer k, if it exists, such as the sum of the digits of n taken to the successive powers of p is equal to k * n.</p>
+        <p class="paragraph paragraph_italic">Is there an integer k such as : (a ^ p + b ^ (p+1) + c ^(p+2) + d ^ (p+3) + ...) = n * k. If it is the case we will return k, if not return -1.</p>
+        <pre class="code">
+  <code class="javascript">
+  const digPow = (n, p) => {
+    const numbersArray = n.toString().split('')
+    let pow = p
+    let sum = 0
+    for (let i = 0; i &lt; numbersArray.length; i++) {
+      sum += Math.pow(+numbersArray[i], pow++)
+    }
+    if (sum % n !== 0) {
+      return -1
+    }
+    return sum / n
+  }
+  </code>
+        </pre>
+      </section>
+      <section class="courses" id="courses">
+        <h2 class="subtitle">Courses</h2>
+        <p class="paragraph">Last completed and current courses: </p>
+        <ul class="courses__list">
+          <li class="courses__item"><a href="https://htmlacademy.ru/" target="_blank">Html5 Css3</a></li>
+          <li class="courses__item"><a href="https://learn.javascript.ru/" target="_blank">JavaScript Manual</a></li>
+          <li class="courses__item"><a href="https://dmitrylavrik.ru/courses" target="_blank">Front-end Development</a></li>
+          <li class="courses__item"><a href="https://rs.school/js/" target="_blank">JavaScript/Front-end</a></li>
+          <li class="courses__item"><a href="https://www.codewars.com/users/AndreyPesh" target="_blank">Codewars account</a></li>
+        </ul>
+      </section>
+    </main>
+  </div>
+  <footer class="footer">
+    <div class="container layout-3-column">
+      <a class="picture-link picture-link_github" href="https://github.com/AndreyPesh" target="_blank"></a>
+      <span>&copy; 2021</span>
+      <a class="picture-link picture-link_rss" href="https://rs.school/js/" target="_blank"></a>
+    </div>
+  </footer>
+  <script src="./js/index.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.9/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+</body>
+</html>
