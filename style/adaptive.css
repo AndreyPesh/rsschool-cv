@@ -114,7 +114,38 @@
   .main {
     max-width: 100%;
   }
- 
+  
+  .about-author {
+    padding-top: 10px;
+  }
+
+  .courses__list {
+    justify-content: space-around;
+  }
+
+  .courses__item {
+    min-width: 35%;
+  }
+}
+
+@media screen and (max-width: 523px) {
+  .skills {
+    min-width: 60%;
+  }
+
+  .language {
+    flex-grow: 1;
+    align-self: flex-start;
+    min-width: 60%;
+  }
+
+  .paragraph {
+    padding: 10px 0 0 0;
+  }
+  
+  .courses__item {
+    min-width: 50%;
+  }
 }
 
 @media screen and (max-width: 425px) {
@@ -124,16 +155,25 @@
 
   .skills {
     max-width: 100%;
+    flex-grow: 1;
   }
 
   .language {
     max-width: 100%;
-    flex-grow: 0;
+    flex-grow: 1;
+  }
+
+  .courses__item {
+    min-width: 70%;
   }
 }
 
 @media screen and (max-width: 320px) {
   .navigation__header.active {
     width: 100%;
+  }
+
+  .courses__item {
+    min-width: 100%;
   }
 }
