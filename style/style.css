@@ -180,6 +180,7 @@ html {
   max-width: calc(100% - 35px);
   margin: 0 auto;
   font-size: 14px;
+  white-space: pre-wrap;
 }
 
 .courses {
